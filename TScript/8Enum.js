@@ -1,3 +1,4 @@
+"use strict";
 var arrows;
 (function (arrows) {
     arrows["UP"] = "UP";
@@ -19,6 +20,21 @@ var Test;
 (function (Test) {
     Test[Test["A"] = 0] = "A";
 })(Test || (Test = {}));
-var testEnumName = Test.A;
-var nameA = Test[testEnumName]; //A
-var enumC = 0 /* ConstEnum.A */;
+let testEnumName = Test.A;
+let nameA = Test[testEnumName]; //A
+let enumC = 0 /* ConstEnum.A */;
+//NEVER
+var Dice;
+(function (Dice) {
+    Dice[Dice["One"] = 1] = "One";
+    Dice[Dice["Two"] = 2] = "Two";
+    Dice[Dice["Tree"] = 3] = "Tree";
+})(Dice || (Dice = {}));
+function ruDice(dice) {
+    switch (dice) {
+        case Dice.One: return "один";
+        case Dice.Two: return "два";
+        case Dice.Tree: return "три";
+        default: const neverVar = dice; // выдас ошибку если попадет сюда. используется для отлавливания ошибок
+    }
+}
