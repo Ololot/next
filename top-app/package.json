@@ -1,0 +1,37 @@
+{
+  "name": "top-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "debug": "cross-env NODE_OPTIONS='--inspect=localhost:9229' next dev",
+    "start": "next start",
+    "lint": "next lint",
+    "stylelint": "stylelint \"**/*.css\" --fix"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "classnames": "^2.3.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "latest",
+    "sass": "^1.69.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "latest"
+  }
+}
